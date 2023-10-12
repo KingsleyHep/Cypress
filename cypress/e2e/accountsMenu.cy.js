@@ -8,9 +8,6 @@ beforeEach(() => {
   cy.selectAnyFarm();
 });
 describe.only("visual regression tests for accounts navigation bar options", () => {
-
- 
- 
   //todo: replace with reusable function - wait for egg grading
   it("takes a picture of the accounts/egg grading page", () => {
     cy.get("#DropDownContainer").within(() => {
@@ -78,10 +75,6 @@ describe.only("visual regression tests for accounts navigation bar options", () 
   //     cy.get("#menuIconsDD").select("Log Out");
   //   });
   //todo: replace with reusable function - wait for logout
-  
-  
-//end of describe scope
+
+  //end of describe scope
 });
-
-
-

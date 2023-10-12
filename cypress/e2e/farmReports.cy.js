@@ -5,7 +5,7 @@ beforeEach(() => {
   cy.visit("https://wilcoxtest.poultrymanager.com/");
   cy.login("unitassup", "D?cQ&TE8!9");
   cy.selectAnyFarm();
-  cy.navigateToReports();
+  cy.navigateToFarmReports();
   cy.waitForIframe("#pageContent");
 });
 
@@ -28,6 +28,7 @@ describe.only("visual regression tests for farm reports", () => {
               //todo: resolve top box DOM element
               cy.get("#TopBox").then(($topBox) => {
                 const insideTopBox = $topBox.contents().find("body");
+                //!can't find these elements inside the iframe #TopBox
                 cy.wrap(insideTopBox).within(() => {
                   cy.get("#ViewRep").should("exist").should("be.visible");
                   cy.get("#options").should("exist").should("be.visible");

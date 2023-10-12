@@ -5,7 +5,7 @@ beforeEach(() => {
   cy.visit("https://wilcoxtest.poultrymanager.com/");
   cy.login("unitassup", "D?cQ&TE8!9");
   cy.selectAnyFarm();
-  cy.navigateToReports();
+  cy.navigateToFarmReports();
   cy.waitForIframe("#pageContent");
 });
 
