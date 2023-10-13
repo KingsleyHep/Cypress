@@ -11,91 +11,52 @@ Cypress.Commands.add("logout", () => {
   cy.get("select").eq(0).select("Log Out", { force: true });
 });
 
-//! use when inside an iframe render promise
-Cypress.Commands.add("waitForIframe", (iframeID) => {
-  cy.get(iframeID)
-    .should("be.visible")
-    .should(($iframe) => {
-      const iframeLoaded = $iframe.prop("contentDocument");
-      expect(iframeLoaded.readyState).to.eq("complete");
-    });
-});
-
 //! use when pop up is present
+//todo: make selecting refactor using iFrame
+// Cypress.Commands.add("selectAnyFarm", () => {
+//   cy.get("#pageContainer").within(() => {
+//     cy.get('iframe[id="pageContent"]').then(function ($iframe) {
+//       const $body = $iframe.contents().find("body");
+//       cy.wrap($body).within(() => {
+//         cy.get('iframe[id="content"]').then(function ($innerframe) {
+//           const $innerbody = $innerframe.contents().find("body");
+//           cy.wrap($innerbody).within(() => {
+//             cy.get("table#FarmersList").first().click();
+//           });
+//         });
+//       });
+//     });
+//   });
+// });
+
 Cypress.Commands.add("selectAnyFarm", () => {
-  cy.get("#pageContainer").within(() => {
-    cy.get('iframe[id="pageContent"]').then(function ($iframe) {
+  cy.iframe("#pageContent").within(() => {
+    cy.frameLoaded("iframe#content").then(function ($iframe) {
       const $body = $iframe.contents().find("body");
       cy.wrap($body).within(() => {
-        cy.get('iframe[id="content"]').then(function ($innerframe) {
-          const $innerbody = $innerframe.contents().find("body");
-          cy.wrap($innerbody).within(() => {
-            cy.get("table#FarmersList").first().click();
-          });
-        });
+        cy.get("table#FarmersList").first().click();
       });
     });
   });
 });
 
-//! use to fetch reports
+//!Navigates to the farm reports page
 Cypress.Commands.add("navigateToFarmReports", () => {
-  cy.get("#pageContainer").within(() => {
-    cy.get('iframe[id="pageContent"]').then(function ($iframe) {
-      const $body = $iframe.contents().find("body");
-      cy.wrap($body).within(() => {
-        cy.get("#Tab").contains("Reports").click();
-        cy.waitForIframe("iframe#content");
-      });
-    });
+  cy.iframe("#pageContent").within(() => {
+    cy.frameLoaded("iframe#content");
+    cy.get("#Tab").contains("Reports").click();
+    cy.frameLoaded("iframe#content");
   });
 });
-/*
-Cypress.Commands.add("navigateToAccountsReports", () => {
-  cy.get("#DropDownContainer").within(() => {
-    cy.get("#menuIconsDD").select("Accounts");
-  });
-  cy.get("#pageContainer").should("exist");
-  cy.get("#pageContainer").within(() => {
-    cy.get('iframe[id="pageContent"]').then(function ($iframe) {
-      const $body = $iframe.contents().find("body");
-      cy.wrap($body).within(() => {
-        cy.get("#TabContainer").should("exist");
-        cy.get("#TabContainer").within(() => {
-          cy.get("#Tab").should("exist");
-          //cy.contains("#Reports").click();
-          cy.get("#Tab").within(() => {
-            cy.get("#Reports").should("exist");
-            cy.get("#Reports").should("contain", "Reports");
-            //cy.contains("#Reports").click();
-            //cy.get("#Reports").click();
-            // cy.get("#Reports").within(() => {
-            //   cy.get("#ReportsUrl").should("exist");
 
-            //   cy.get("#ReportsUrl").click();
-          });
-        });
-      });
-    });
-  });
-});
-*/
-
+//! navigates to the accounts reports page
+//todo: fix element traversal
 Cypress.Commands.add("navigateToAccountsReports", () => {
   cy.get("#DropDownContainer").within(() => {
     cy.get("#menuIconsDD").select("Accounts");
   });
   cy.iframe("#pageContent").within(() => {
-    //cy.get("#Tab").contains("Reports").click();
-    //cy.get("#Reports").click();
-    cy.get("#TabContainer").within(() => {
-      //cy.get("#Tab").contains("Reports").click();
-      //cy.get("#Reports").click();
-      cy.get("#Tab").within(() => {
-        //cy.get("#Tab").contains("Reports").click();
-        //cy.get("#Reports").click();
-        cy.get("#Reports").should("exist");
-      });
-    });
+    cy.frameLoaded("iframe#content");
+    cy.get("#Tab").contains("Reports").click();
   });
 });

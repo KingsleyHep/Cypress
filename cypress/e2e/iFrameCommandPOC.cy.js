@@ -5,8 +5,13 @@ beforeEach(() => {
   cy.visit("https://wilcoxtest.poultrymanager.com/");
   cy.login("unitassup", "D?cQ&TE8!9");
   cy.selectAnyFarm();
-  cy.navigateToAccountsReports();
 });
-describe.only("creating methods for accessing the iFrames in PoultryManager", () => {
-  it("identifies and manipulates the iFrame on the accounts menu", () => {});
+describe("creating methods for accessing the iFrames in PoultryManager", () => {
+  it.only("identifies and manipulates the iFrame on the farm menu", () => {
+    cy.navigateToFarmReports();
+  });
+
+  it("identifies and manipulates the iFrame on the accounts menu", () => {
+    cy.navigateToAccountsReports();
+  });
 });

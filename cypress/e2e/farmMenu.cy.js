@@ -6,6 +6,8 @@ beforeEach(() => {
   cy.login("unitassup", "D?cQ&TE8!9");
   cy.selectAnyFarm();
 });
+
+//! all of farm menu needs refactored
 describe.only("visual regression tests for farm navigation bar options", () => {
   it("takes a picture of the dashboard page", () => {
     cy.get("#pageContainer").within(() => {

@@ -13,17 +13,8 @@ describe.only("visual regression tests for accounts navigation bar options", () 
     cy.get("#DropDownContainer").within(() => {
       cy.get("#menuIconsDD").select("Accounts");
     });
-    cy.get("#pageContainer").within(() => {
-      cy.get('iframe[id="pageContent"]').then(function ($iframe) {
-        const $body = $iframe.contents().find("body");
-        cy.wrap($body).within(() => {
-          //!falling over at navigation bar despite being the same iframe structure as the farm menu bar
-          cy.get("#Tab").contains("Egg Grading").click();
-          cy.waitForIframe("iframe#content");
-          cy.compareSnapshot("WC test accounts EGG GRADING", 0.2);
-        });
-      });
-    });
+    //cy.frameLoaded("iframe#content");
+    cy.compareSnapshot("WC test accounts EGG GRADING", 0.2);
   });
 
   //transactions
@@ -31,6 +22,7 @@ describe.only("visual regression tests for accounts navigation bar options", () 
     cy.get("#DropDownContainer").within(() => {
       cy.get("#menuIconsDD").select("Accounts");
     });
+
     //todo: replace with reusable function - wait for transactions
   });
 
