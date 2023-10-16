@@ -14,7 +14,7 @@ describe.only("visual regression tests for accounts navigation bar options", () 
       cy.get("#menuIconsDD").select("Accounts");
     });
     //cy.frameLoaded("iframe#content");
-    cy.compareSnapshot("WC test accounts EGG GRADING", 0.2);
+    cy.compareSnapshot("egg grading", 0.2);
   });
 
   //transactions
@@ -48,7 +48,7 @@ describe.only("visual regression tests for accounts navigation bar options", () 
     });
     //todo: replace with reusable function - wait for planning
     cy.wait(1500);
-    cy.compareSnapshot("WC test planning page", 0.2);
+    cy.compareSnapshot("planning", 0.2);
   });
 
   it("takes a picture of the admin page", () => {
@@ -57,7 +57,7 @@ describe.only("visual regression tests for accounts navigation bar options", () 
     });
     //todo: replace with reusable function - wait for admin
     cy.wait(1500);
-    cy.compareSnapshot("WC test admin", 0.2);
+    cy.compareSnapshot("admin", 0.2);
   });
   //! logout is not taking picture of logout page
   // it("takes a picture of the logout page", () => {
