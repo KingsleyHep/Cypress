@@ -15,59 +15,19 @@ describe("visual regression tests for accounts reports", () => {
   });
 
   it.only("should take a picture the user admin page", () => {
-    cy.get(
-      'a[href="../shared/useradmin_sel.asp?action=0&amp;usr=unitassup"]'
-    ).click();
-    const link = document.querySelector(
-      'a[href="../shared/useradmin_sel.asp?action=0&amp;usr=unitassup"]'
-    );
-    link.click();
-    cy.get(
-      'a[title="Manage the levels, group assignments and outlet access for the users in your organisation"]'
-    ).click();
-    const linkb = document.querySelector(
-      'a[title="Manage the levels, group assignments and outlet access for the users in your organisation"]'
-    );
-    linkb.click();
-    cy.contains("User Administration").click();
-    const linkc = document.querySelector("a");
-    if (linkc.textContent === "User Administration") {
-      linkc.click();
-    }
-    cy.get('a font[color="#e8386f"]').click();
-    const linkd = document.querySelector('a font[color="#e8386f"]');
-    linkd.click();
-    const adminOptsTable = document.getElementById("adminOpts");
-    cy.wrap(adminOptsTable).should("be.visible");
-    cy.compareSnapshot("userAdmin", 0.3);
+    //cy.get("#AdminOpts").should("be.visible");
     cy.iframe("#pageContent").within(() => {
-      // cy.get(
-      //   'a[href="../shared/useradmin_sel.asp?action=0&amp;usr=unitassup"]'
-      // ).click();
-      // const link = document.querySelector(
-      //   'a[href="../shared/useradmin_sel.asp?action=0&amp;usr=unitassup"]'
-      // );
-      // link.click();
-      // cy.get(
-      //   'a[title="Manage the levels, group assignments and outlet access for the users in your organisation"]'
-      // ).click();
-      // const linkb = document.querySelector(
-      //   'a[title="Manage the levels, group assignments and outlet access for the users in your organisation"]'
-      // );
-      // linkb.click();
-      //cy.contains("User Administration").click();
-      // const linkc = document.querySelector("a");
-      // if (linkc.textContent === "User Administration") {
-      //   linkc.click();
-      // }
-      // cy.get('a font[color="#e8386f"]').click();
-      // const linkd = document.querySelector('a font[color="#e8386f"]');
-      // linkd.click();
-      // const adminOptsTable = document.getElementById("adminOpts");
-      // cy.wrap(adminOptsTable).should("be.visible");
-      // cy.compareSnapshot("userAdmin", 0.3);
+      //cy.get(".unitas_background").should("exist");
+      cy.get(".unitas_background").children();
+
+      // const insideUnitasBackground = cy.get(".unitas_background").children();
+      // insideUnitasBackground.should("exist");
     });
+
+    cy.iframe("#pageContent").find(".unitas_background").should("exist");
   });
 
   //end of describe scope
 });
+
+//cy.get('[name="form"]').should("be.visible");

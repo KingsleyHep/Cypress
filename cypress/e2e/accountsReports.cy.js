@@ -7,7 +7,7 @@ beforeEach(() => {
   cy.selectAnyFarm();
   cy.navigateToAccountsReports();
 });
-
+//todo: use visibility of elements and in built time out to create wait for reports
 //Page is rendered with pageContainer first, then iFrame of pageContent, then and iFrame of content
 describe.only("visual regression tests for accounts reports", () => {
   it.only("should take a picture of the  accounts reports page on load", () => {
