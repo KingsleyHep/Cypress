@@ -17,14 +17,21 @@ describe("visual regression tests for accounts reports", () => {
   it.only("should take a picture the user admin page", () => {
     //cy.get("#AdminOpts").should("be.visible");
     cy.iframe("#pageContent").within(() => {
-      //cy.get(".unitas_background").should("exist");
-      cy.get(".unitas_background").children();
+      cy.get(".unitas_background").should("exist");
+      //cy.get(".unitas_background").its('0.contentDocument.body').
 
+      //cy.get(".unitas_background").children();
       // const insideUnitasBackground = cy.get(".unitas_background").children();
       // insideUnitasBackground.should("exist");
     });
 
     cy.iframe("#pageContent").find(".unitas_background").should("exist");
+    const pageContentiFrame = cy.iframe("#pageContent").find("#document");
+    //!return to docs and start here'
+    cy.enter("#pageContent").then((getiFrameBody) => {
+      getiFrameBody().find(".unitas_background").should("exist");
+      getiFrameBody().find("#AdminOpts").children().should("exist");
+    });
   });
 
   //end of describe scope
