@@ -213,7 +213,7 @@ describe("visual regression tests admin pages", () => {
     //todo refresh image needs a reliable element to wait for
     cy.compareSnapshot("egg weight refresh results", 0.4);
 
-    //  //navigate back
+    //navigate back
     cy.get("#pageContent")
       .its("0.contentDocument")
       .its("body")
@@ -260,40 +260,39 @@ describe("visual regression tests admin pages", () => {
   });
 
   //todo: Maintenance options
-  it.only("should take pictures of the maintenance page options", () => {
-    // //farm
-    // cy.get("#pageContent")
-    //   .its("0.contentDocument")
-    //   .its("body")
-    //   //located by id on main sys admin page
-    //   .find("#AdminOpts")
-    //   .then((body) => {
-    //     cy.wrap(body)
-    //       .find("td")
-    //       .find('a[href="../farms/f_farm_sel1.asp?mode=F"]')
-    //       .click();
-    //   });
-    // cy.compareSnapshot("farms maintenance on load", 0.3);
-    // //click search
-    // cy.get("#pageContent")
-    //   .its("0.contentDocument")
-    //   .its("body")
-    //   .find('[name="DM"]')
-    //   .then((body) => {
-    //     cy.wrap(body).find('[name="but_search"]').click();
-    //   });
-    // //screenshot results
-    // cy.compareSnapshot("farms maintenance on search", 0.3);
-    // //navigate back
-    // cy.get("#pageContent")
-    //   .its("0.contentDocument")
-    //   .its("body")
-    //   .find('[name="DM"]')
-    //   .then((body) => {
-    //     cy.wrap(body).find('[name="Back"]').click();
-    //   });
-
-    //!house
+  it("should take pictures of the maintenance page options", () => {
+    //farm
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find('a[href="../farms/f_farm_sel1.asp?mode=F"]')
+          .click();
+      });
+    cy.compareSnapshot("farms maintenance on load", 0.3);
+    //click search
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="DM"]')
+      .then((body) => {
+        cy.wrap(body).find('[name="but_search"]').click();
+      });
+    //screenshot results
+    cy.compareSnapshot("farms maintenance on search", 0.3);
+    //navigate back
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="DM"]')
+      .then((body) => {
+        cy.wrap(body).find('[name="Back"]').click();
+      });
+    //house maintenance
     cy.get("#pageContent")
       .its("0.contentDocument")
       .its("body")
@@ -306,35 +305,21 @@ describe("visual regression tests admin pages", () => {
           .click();
       });
     cy.compareSnapshot("houses maintenance on load", 0.3);
-
     //click farm button
-    cy.get("#pageContent")
-      .its("0.contentDocument")
-      .its("body")
-      .find('[name="form1"]')
-      .then((body) => {
-        cy.wrap(body).find("#FarmCode").click();
-      });
-    //!select a farm
-
-    // cy.get("#pageContent")
-    //   .its("0.contentDocument")
-    //   .its("body")
-    //   .find("FarmerDisplay")
-    //   .should("be.visible");
-
+    //todo: uncomment to test select farm
     // cy.get("#pageContent")
     //   .its("0.contentDocument")
     //   .its("body")
     //   .find('[name="form1"]')
     //   .then((body) => {
-    //     cy.wrap(body).find("#statusDisplay").should("be.visible");
-    //     cy.wrap(body).find("#FarmerDisplay").should("be.visible");
-    //     cy.wrap(body).find("#FarmersList").click();
+    //     cy.wrap(body).find("#FarmCode").click();
     //   });
-    cy.pause();
-    //take a screenshot after loading a farm
-    cy.compareSnapshot("house maintenance after loading a farm", 0.3);
+    //todo: select a farm
+    //?how to navigate to farm selection popup on this screen
+    // cy.get("#statusDisplay").should("exist");
+    // cy.get("#FarmerDisplay").should("exist");
+    //todo take a screenshot after loading a farm
+    //cy.compareSnapshot("house maintenance after loading a farm", 0.3);
     //navigate back
     cy.get("#pageContent")
       .its("0.contentDocument")
@@ -343,33 +328,351 @@ describe("visual regression tests admin pages", () => {
       .then((body) => {
         cy.wrap(body).find('[name="Back"]').click();
       });
-    //!
     //flock
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find('a[href="../farms/f_farm_sel1.asp?mode=C"]')
+          .click();
+      });
+    cy.compareSnapshot("flock maintenance on load", 0.3);
+    //click search
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="DM"]')
+      .then((body) => {
+        cy.wrap(body).find('[name="but_search"]').click();
+      });
+    //take screenshot
+    cy.compareSnapshot("flock maintenance on search", 0.3);
+    //navigate back
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="DM"]')
+      .then((body) => {
+        cy.wrap(body).find('[name="Back"]').click();
+      });
 
-    //bird type
+    //bird type maintenance
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find('a[href="../farms/f_Btyp_maint.asp"]')
+          .click();
+      });
+    cy.compareSnapshot("bird type maintenance on load", 0.3);
+    //click search
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="OM"]')
+      .then((body) => {
+        cy.wrap(body).find('[name="USearch"]').click();
+      });
+    //take screenshot
+    cy.compareSnapshot("bird type maintenance on search", 0.3);
+    //navigate back
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="OM"]')
+      .then((body) => {
+        cy.wrap(body).find('[name="Back"]').click();
+      });
 
     //group codes
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find('a[href="../farms/f_Group_maint.asp"]')
+          .click();
+      });
+    cy.compareSnapshot("group codes maintenance on load", 0.3);
+    //click search
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="OM"]')
+      .then((body) => {
+        cy.wrap(body).find('[name="USearch"]').click();
+      });
+    //take screenshot of search results
+    cy.compareSnapshot("group codes maintenance on search", 0.3);
+    //navigate back
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="OM"]')
+      .then((body) => {
+        cy.wrap(body).find('[name="Back"]').click();
+      });
 
     //breed codes
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find('a[href="../farms/f_Breedtyp_maint.asp"]')
+          .click();
+      });
+    cy.compareSnapshot("breed codes maintenance on load", 0.3);
+    //click search
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="OM"]')
+      .then((body) => {
+        cy.wrap(body).find('[name="USearch"]').click();
+      });
+    //take screenshot of search results
+    cy.compareSnapshot("breed codes maintenance on search", 0.3);
+    //navigate back
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="OM"]')
+      .then((body) => {
+        cy.wrap(body).find('[name="Back"]').click();
+      });
 
     //mill
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find(
+            'a[href="../shared/call_dot_net_page.asp?page=../farms/MillMaintenance.aspx"]'
+          )
+          .click();
+      });
+    cy.compareSnapshot("mill maintenance on load", 0.3);
+    //navigate back
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="form1"]')
+      .then((body) => {
+        cy.wrap(body).find("#Back").click();
+      });
 
     //product maintenance
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find(
+            'a[href="../shared/call_dot_net_page.asp?page=../farms/ProductMaint.aspx"]'
+          )
+          .click();
+      });
+    //todo: replace wait with element that is visible
+    cy.wait(1500);
+    cy.compareSnapshot("product maintenance on load", 0.3);
+    //todo: use same fix as other pop up problem
+    // //click product selection button
+    // cy.get("#pageContent")
+    //   .its("0.contentDocument")
+    //   .its("body")
+    //   .find('[name="form1"]')
+    //   .then((body) => {
+    //     cy.wrap(body).find("#Product").click();
+    //   });
+    // cy.compareSnapshot("product maintenance product selection", 0.3);
+
+    // //close product selection popup
+    // cy.get(
+    //   ".ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable"
+    // ).should("exist");
+    // cy.get(
+    //   ".ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable"
+    // ).within(() => {
+    //   cy.get('a[href="#"]').click();
+    // });
+
+    //navigate back
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="form1"]')
+      .then((body) => {
+        cy.wrap(body).find("#Back").click();
+      });
 
     //product pricing
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find(
+            'a[href="../shared/call_dot_net_page.asp?page=../farms/GroupProductMaint.aspx"]'
+          )
+          .click();
+      });
+    //todo: replace wait with element that is visible
+    cy.wait(1800);
+    cy.compareSnapshot("product pricing on load", 0.3);
+
+    //click price dropdown
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="form1"]')
+      .then((body) => {
+        //todo: find a way to click and display the dropdown
+        cy.wrap(body).find("#Group").should("exist");
+      });
+    //take screenshot of dropdowns
+    cy.compareSnapshot("product pricing dropdowns", 0.3);
+    //click refresh
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="form1"]')
+      .then((body) => {
+        cy.wrap(body).find("#Refresh").click();
+      });
+    //take screenshot of refresh results
+    cy.compareSnapshot("product pricing refresh results", 0.3);
+    //navigate back
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="form1"]')
+      .then((body) => {
+        cy.wrap(body).find("#Back").click();
+      });
 
     //farm types
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find(
+            'a[href="../shared/call_dot_net_page.asp?page=../farms/FarmTypes.aspx"]'
+          )
+          .click();
+      });
+    //todo: replace wait with element that is visible
+    cy.wait(1800);
+    cy.compareSnapshot("farm types on load", 0.3);
+    //click refresh
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="form1"]')
+      .then((body) => {
+        cy.wrap(body).find("#Refresh").click();
+      });
+
+    cy.compareSnapshot("farm types refresh results", 0.3);
+    //navigate back
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="form1"]')
+      .then((body) => {
+        cy.wrap(body).find("#Back").click();
+      });
 
     //templates
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find(
+            'a[href="../shared/call_dot_net_page.asp?page=../farms/FarmScheduleMaintenance.aspx"]'
+          )
+          .click();
+      });
+    //todo: replace wait with element that is visible
+    cy.wait(1800);
+    cy.compareSnapshot("templates on load", 0.3);
+    //click schedule
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="form1"]')
+      .then((body) => {
+        cy.wrap(body).find("#TemplateGroupPicklist").click();
+      });
+    cy.compareSnapshot("templates schedule on click", 0.3);
+    //click back - absent
+    cy.get("#DropDownContainer").within(() => {
+      cy.get("#menuIconsDD").select("Farm");
+    });
+    cy.navigateToAdminOptions();
 
     //regenerate egg flow
-    cy.pause();
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find(
+            'a[href="../shared/call_dot_net_page.asp?page=../farms/RegenerateEntireEggFlow.aspx"]'
+          )
+          .click();
+      });
+    //todo: replace wait with element that is visible
+    cy.wait(1800);
+    cy.compareSnapshot("regenerate egg flow on load", 0.3);
+    //logout
+    cy.logout();
   });
+
   //todo: workflow maintenance
-
+  it("should take pictures of the workflow maintenance page options", () => {
+    //lists
+  });
   //todo: certificates and contracts
-
+  it("should take pictures of the certificates and contracts page options", () => {
+    //certificate types
+    //farm certificates
+    //contract types
+  });
   //end of describe scope
 });
-
-//cy.get('[name="form"]').should("be.visible");

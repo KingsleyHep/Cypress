@@ -11,6 +11,7 @@ beforeEach(() => {
 
 //Page is rendered with pageContainer first, then iFrame of pageContent, then and iFrame of content
 describe.only("visual regression tests for farm reports", () => {
+  //todo: refactor with cypress docs resolution for DOM body
   it("should take a picture of the reports page on load", () => {
     cy.get("#pageContainer").within(() => {
       cy.get('iframe[id="pageContent"]').then(function ($iframe) {
