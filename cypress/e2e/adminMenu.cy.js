@@ -16,8 +16,9 @@ describe("visual regression tests admin pages", () => {
     cy.compareSnapshot("system admin", 0.3);
   });
 
+  //!  start of should take pictures the user admin page options
   it("should take pictures the user admin page options", () => {
-    //! - user admin menu options
+    //user admin menu options
     cy.get("#pageContent")
       .its("0.contentDocument")
       .its("body")
@@ -120,6 +121,8 @@ describe("visual regression tests admin pages", () => {
     //todo: check iFrame plugin for cypress docs
     // cy.iframe("#pageContent").get(".unitas_background").should("exist");
     // cy.enter("#pageContent").then((getiFrameBody) => {});
+
+    //! end of should take pictures the user admin page options
   });
 
   //todo: report admin options
@@ -667,12 +670,62 @@ describe("visual regression tests admin pages", () => {
   //todo: workflow maintenance
   it("should take pictures of the workflow maintenance page options", () => {
     //lists
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find(
+            'a[href="../shared/call_dot_net_page.asp?page=../canvas/CanvasListMaintenance.aspx"]'
+          )
+          .click();
+      });
+    //todo: replace wait with element that is visible
+    cy.wait(1800);
+    cy.compareSnapshot("list maintenance on load", 0.3);
+    //click list
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="form1"]')
+      .then((body) => {
+        cy.wrap(body).find("#List").click();
+      });
+    cy.compareSnapshot("list maintenance on search", 0.3);
   });
+
   //todo: certificates and contracts
-  it("should take pictures of the certificates and contracts page options", () => {
+  it.only("should take pictures of the certificates and contracts page options", () => {
     //certificate types
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      //located by id on main sys admin page
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find('a[href="../farms/CertificateMaintenance.aspx?"]')
+          .click();
+      });
+    //todo: replace wait with element that is visible
+    cy.wait(1800);
+    cy.compareSnapshot("certificate types on load", 0.3);
+    //navigate back
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="form1"]')
+      .then((body) => {
+        cy.wrap(body).find("#BackBTN").click();
+      });
+    //!begin here
     //farm certificates
     //contract types
   });
+
   //end of describe scope
 });
