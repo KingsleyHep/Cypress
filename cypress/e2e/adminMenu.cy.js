@@ -128,6 +128,8 @@ describe("visual regression tests admin pages", () => {
   //todo: report admin options
   it("should take pictures of the report admin page options", () => {
     //PSR Standards
+    //cy.get("#pageContent").should("exist", { timeout: 40000 });
+    cy.wait(5000);
     cy.get("#pageContent")
       .its("0.contentDocument")
       .its("body")
@@ -203,6 +205,7 @@ describe("visual regression tests admin pages", () => {
           .find('a[href="../farms/EggWeightStandardMaintenance.aspx?"]')
           .click();
       });
+    cy.wait(1500);
     cy.compareSnapshot("egg weight percentages on load", 0.4);
     //click refresh
     cy.get("#pageContent")
@@ -698,7 +701,7 @@ describe("visual regression tests admin pages", () => {
   });
 
   //todo: certificates and contracts
-  it.only("should take pictures of the certificates and contracts page options", () => {
+  it("should take pictures of the certificates and contracts page options", () => {
     //certificate types
     cy.get("#pageContent")
       .its("0.contentDocument")
