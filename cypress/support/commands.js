@@ -47,3 +47,7 @@ Cypress.Commands.add("navigateToAdminOptions", () => {
     cy.get("#menuIconsDD").select("Admin");
   });
 });
+
+Cypress.Commands.add("getBody", (docId) => {
+  cy.get(docId).its("0.contentDocument").its("body");
+});

@@ -1,0 +1,387 @@
+{
+  "total": 29,
+  "totalPassed": 26,
+  "totalFailed": 3,
+  "totalSuites": 9,
+  "suites": [
+    {
+      "name": "accountsMenu.cy.js",
+      "path": "cypress\\e2e\\accountsMenu.cy.js",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "accountsMenu.cy-egg grading",
+          "percentage": 0,
+          "failureThreshold": 0.2,
+          "specPath": "cypress\\e2e\\accountsMenu.cy.js",
+          "specFilename": "accountsMenu.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\accountsMenu.cy-egg grading.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\accountsMenu.cy-egg grading.png"
+        },
+        {
+          "status": "pass",
+          "name": "accountsMenu.cy-planning",
+          "percentage": 0,
+          "failureThreshold": 0.2,
+          "specPath": "cypress\\e2e\\accountsMenu.cy.js",
+          "specFilename": "accountsMenu.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\accountsMenu.cy-planning.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\accountsMenu.cy-planning.png"
+        },
+        {
+          "status": "pass",
+          "name": "accountsMenu.cy-admin",
+          "percentage": 0,
+          "failureThreshold": 0.2,
+          "specPath": "cypress\\e2e\\accountsMenu.cy.js",
+          "specFilename": "accountsMenu.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\accountsMenu.cy-admin.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\accountsMenu.cy-admin.png"
+        }
+      ]
+    },
+    {
+      "name": "accountsReports.cy.js",
+      "path": "cypress\\e2e\\accountsReports.cy.js",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "accountsReports.cy-accountsReports on load",
+          "percentage": 0,
+          "failureThreshold": 2.5,
+          "specPath": "cypress\\e2e\\accountsReports.cy.js",
+          "specFilename": "accountsReports.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\accountsReports.cy-accountsReports on load.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\accountsReports.cy-accountsReports on load.png"
+        }
+      ]
+    },
+    {
+      "name": "adminMenu-certificatesAndContracts.cy.js",
+      "path": "cypress\\e2e\\adminMenu-certificatesAndContracts.cy.js",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "adminMenu-certificatesAndContracts.cy-certificate types on load",
+          "percentage": 0,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-certificatesAndContracts.cy.js",
+          "specFilename": "adminMenu-certificatesAndContracts.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-certificatesAndContracts.cy-certificate types on load.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-certificatesAndContracts.cy-certificate types on load.png"
+        }
+      ]
+    },
+    {
+      "name": "adminMenu-maintenance.cy.js",
+      "path": "cypress\\e2e\\adminMenu-maintenance.cy.js",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "adminMenu-maintenance.cy-farms maintenance on load",
+          "percentage": 0.03567914668676404,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-maintenance.cy.js",
+          "specFilename": "adminMenu-maintenance.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-maintenance.cy-farms maintenance on load.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-maintenance.cy-farms maintenance on load.png"
+        },
+        {
+          "status": "fail",
+          "name": "adminMenu-maintenance.cy-farms maintenance on search",
+          "percentage": 0.31496845588904326,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-maintenance.cy.js",
+          "specFilename": "adminMenu-maintenance.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-maintenance.cy-farms maintenance on search.png",
+          "diffPath": "cypress-visual-screenshots\\diff\\adminMenu-maintenance.cy-farms maintenance on search.png",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-maintenance.cy-farms maintenance on search.png"
+        }
+      ]
+    },
+    {
+      "name": "adminMenu-reportAdmin.cy.js",
+      "path": "cypress\\e2e\\adminMenu-reportAdmin.cy.js",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "adminMenu-reportAdmin.cy-PSR Standards on load",
+          "percentage": 0,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-reportAdmin.cy.js",
+          "specFilename": "adminMenu-reportAdmin.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-reportAdmin.cy-PSR Standards on load.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-reportAdmin.cy-PSR Standards on load.png"
+        },
+        {
+          "status": "pass",
+          "name": "adminMenu-reportAdmin.cy-PSR Standards search results",
+          "percentage": 0,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-reportAdmin.cy.js",
+          "specFilename": "adminMenu-reportAdmin.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-reportAdmin.cy-PSR Standards search results.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-reportAdmin.cy-PSR Standards search results.png"
+        },
+        {
+          "status": "pass",
+          "name": "adminMenu-reportAdmin.cy-PSL Standards on load",
+          "percentage": 0,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-reportAdmin.cy.js",
+          "specFilename": "adminMenu-reportAdmin.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-reportAdmin.cy-PSL Standards on load.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-reportAdmin.cy-PSL Standards on load.png"
+        },
+        {
+          "status": "pass",
+          "name": "adminMenu-reportAdmin.cy-PSL Standards search results",
+          "percentage": 0,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-reportAdmin.cy.js",
+          "specFilename": "adminMenu-reportAdmin.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-reportAdmin.cy-PSL Standards search results.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-reportAdmin.cy-PSL Standards search results.png"
+        },
+        {
+          "status": "pass",
+          "name": "adminMenu-reportAdmin.cy-egg weight percentages on load",
+          "percentage": 0,
+          "failureThreshold": 0.4,
+          "specPath": "cypress\\e2e\\adminMenu-reportAdmin.cy.js",
+          "specFilename": "adminMenu-reportAdmin.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-reportAdmin.cy-egg weight percentages on load.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-reportAdmin.cy-egg weight percentages on load.png"
+        },
+        {
+          "status": "pass",
+          "name": "adminMenu-reportAdmin.cy-egg weight refresh results",
+          "percentage": 0,
+          "failureThreshold": 0.4,
+          "specPath": "cypress\\e2e\\adminMenu-reportAdmin.cy.js",
+          "specFilename": "adminMenu-reportAdmin.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-reportAdmin.cy-egg weight refresh results.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-reportAdmin.cy-egg weight refresh results.png"
+        },
+        {
+          "status": "pass",
+          "name": "adminMenu-reportAdmin.cy-standard types maintenance on load",
+          "percentage": 0,
+          "failureThreshold": 0.4,
+          "specPath": "cypress\\e2e\\adminMenu-reportAdmin.cy.js",
+          "specFilename": "adminMenu-reportAdmin.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-reportAdmin.cy-standard types maintenance on load.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-reportAdmin.cy-standard types maintenance on load.png"
+        },
+        {
+          "status": "pass",
+          "name": "adminMenu-reportAdmin.cy-standard types maintenance search results",
+          "percentage": 0,
+          "failureThreshold": 0.4,
+          "specPath": "cypress\\e2e\\adminMenu-reportAdmin.cy.js",
+          "specFilename": "adminMenu-reportAdmin.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-reportAdmin.cy-standard types maintenance search results.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-reportAdmin.cy-standard types maintenance search results.png"
+        }
+      ]
+    },
+    {
+      "name": "adminMenu-userAdmin.cy.js",
+      "path": "cypress\\e2e\\adminMenu-userAdmin.cy.js",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "adminMenu-userAdmin.cy-user administration",
+          "percentage": 0,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-userAdmin.cy.js",
+          "specFilename": "adminMenu-userAdmin.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-userAdmin.cy-user administration.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-userAdmin.cy-user administration.png"
+        },
+        {
+          "status": "pass",
+          "name": "adminMenu-userAdmin.cy-customer user maintenance on load",
+          "percentage": 0.030107900477973442,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-userAdmin.cy.js",
+          "specFilename": "adminMenu-userAdmin.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-userAdmin.cy-customer user maintenance on load.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-userAdmin.cy-customer user maintenance on load.png"
+        },
+        {
+          "status": "pass",
+          "name": "adminMenu-userAdmin.cy-customer user maintenance search results",
+          "percentage": 0.010052651736639436,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-userAdmin.cy.js",
+          "specFilename": "adminMenu-userAdmin.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-userAdmin.cy-customer user maintenance search results.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-userAdmin.cy-customer user maintenance search results.png"
+        },
+        {
+          "status": "fail",
+          "name": "adminMenu-userAdmin.cy-customer group maintenance on load",
+          "percentage": 0.37410123568356446,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-userAdmin.cy.js",
+          "specFilename": "adminMenu-userAdmin.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-userAdmin.cy-customer group maintenance on load.png",
+          "diffPath": "cypress-visual-screenshots\\diff\\adminMenu-userAdmin.cy-customer group maintenance on load.png",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-userAdmin.cy-customer group maintenance on load.png"
+        }
+      ]
+    },
+    {
+      "name": "adminMenu-workflowMaintenance.cy.js",
+      "path": "cypress\\e2e\\adminMenu-workflowMaintenance.cy.js",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "adminMenu-workflowMaintenance.cy-list maintenance on load",
+          "percentage": 0,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-workflowMaintenance.cy.js",
+          "specFilename": "adminMenu-workflowMaintenance.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-workflowMaintenance.cy-list maintenance on load.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-workflowMaintenance.cy-list maintenance on load.png"
+        },
+        {
+          "status": "pass",
+          "name": "adminMenu-workflowMaintenance.cy-list maintenance on search",
+          "percentage": 0,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\adminMenu-workflowMaintenance.cy.js",
+          "specFilename": "adminMenu-workflowMaintenance.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\adminMenu-workflowMaintenance.cy-list maintenance on search.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\adminMenu-workflowMaintenance.cy-list maintenance on search.png"
+        }
+      ]
+    },
+    {
+      "name": "farmMenu-reports.cy.js",
+      "path": "cypress\\e2e\\farmMenu-reports.cy.js",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "farmMenu-reports.cy-farmn reports on load",
+          "percentage": 0,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\farmMenu-reports.cy.js",
+          "specFilename": "farmMenu-reports.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\farmMenu-reports.cy-farmn reports on load.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\farmMenu-reports.cy-farmn reports on load.png"
+        }
+      ]
+    },
+    {
+      "name": "farmMenu.cy.js",
+      "path": "cypress\\e2e\\farmMenu.cy.js",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "farmMenu.cy-dashboard",
+          "percentage": 0,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\farmMenu.cy.js",
+          "specFilename": "farmMenu.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\farmMenu.cy-dashboard.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\farmMenu.cy-dashboard.png"
+        },
+        {
+          "status": "pass",
+          "name": "farmMenu.cy-group",
+          "percentage": 0,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\farmMenu.cy.js",
+          "specFilename": "farmMenu.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\farmMenu.cy-group.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\farmMenu.cy-group.png"
+        },
+        {
+          "status": "pass",
+          "name": "farmMenu.cy-production",
+          "percentage": 0.20289384544350697,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\farmMenu.cy.js",
+          "specFilename": "farmMenu.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\farmMenu.cy-production.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\farmMenu.cy-production.png"
+        },
+        {
+          "status": "fail",
+          "name": "farmMenu.cy-placement",
+          "percentage": 0.34851765386102085,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\farmMenu.cy.js",
+          "specFilename": "farmMenu.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\farmMenu.cy-placement.png",
+          "diffPath": "cypress-visual-screenshots\\diff\\farmMenu.cy-placement.png",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\farmMenu.cy-placement.png"
+        },
+        {
+          "status": "pass",
+          "name": "farmMenu.cy-schedule",
+          "percentage": 0.16144147055911498,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\farmMenu.cy.js",
+          "specFilename": "farmMenu.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\farmMenu.cy-schedule.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\farmMenu.cy-schedule.png"
+        },
+        {
+          "status": "pass",
+          "name": "farmMenu.cy-documents",
+          "percentage": 0.15289563076322904,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\farmMenu.cy.js",
+          "specFilename": "farmMenu.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\farmMenu.cy-documents.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\farmMenu.cy-documents.png"
+        },
+        {
+          "status": "pass",
+          "name": "farmMenu.cy-farmReports",
+          "percentage": 0.05553795598554911,
+          "failureThreshold": 0.3,
+          "specPath": "cypress\\e2e\\farmMenu.cy.js",
+          "specFilename": "farmMenu.cy.js",
+          "baselinePath": "cypress-visual-screenshots\\baseline\\farmMenu.cy-farmReports.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots\\comparison\\farmMenu.cy-farmReports.png"
+        }
+      ]
+    }
+  ],
+  "startedAt": "2023-10-30T15:22:38.473Z",
+  "endedAt": "2023-10-30T15:25:12.405Z",
+  "duration": 141730,
+  "browserName": "electron",
+  "browserVersion": "114.0.5735.289",
+  "cypressVersion": "13.2.0"
+}
