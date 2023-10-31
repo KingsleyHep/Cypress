@@ -37,8 +37,17 @@ Cypress.Commands.add("navigateToAccountsReports", () => {
     cy.get("#menuIconsDD").select("Accounts");
   });
   cy.iframe("#pageContent").within(() => {
-    cy.frameLoaded("iframe#content");
     cy.get("#Tab").contains("Reports").click();
+    cy.get("#Tab").within(() => {
+      cy.get("td#Reports");
+      cy.get('td[id="Reports"]');
+      cy.get("td.centreTab.nonselectedTab");
+      cy.get('td[id="Reports"].centreTab.nonselectedTab');
+      //cy.get("td#Reports").click();
+      //cy.get('td[id="Reports"]').click();
+      //cy.get("td.centreTab.nonselectedTab").click();
+      //cy.get('td[id="Reports"].centreTab.nonselectedTab').click();
+    });
   });
 });
 

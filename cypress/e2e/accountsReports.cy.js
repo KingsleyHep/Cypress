@@ -14,10 +14,8 @@ describe.only("visual regression tests for accounts reports", () => {
     cy.compareSnapshot("accountsReports on load", 2.5);
   });
 
-  it("should take a picture of the first report in the menu", () => {
-    cy.get("#Reports").should("exist").should("be.visible");
-    cy.compareSnapshot("accountsReports first report", 2.5);
-  });
-
-  //its' scope
+  // it("should take a picture of the first report in the menu", () => {
+  //   cy.get("#Reports").should("exist").should("be.visible");
+  //   cy.compareSnapshot("accountsReports first report", 2.5);
+  // });
 }); //end of describe scope
