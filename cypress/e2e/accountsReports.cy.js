@@ -11,6 +11,7 @@ beforeEach(() => {
 //Page is rendered with pageContainer first, then iFrame of pageContent, then and iFrame of content
 describe.only("visual regression tests for accounts reports", () => {
   it.only("should take a picture of the  accounts reports page on load", () => {
+    cy.wait(500);
     cy.compareSnapshot("accountsReports on load", 2.5);
   });
 
