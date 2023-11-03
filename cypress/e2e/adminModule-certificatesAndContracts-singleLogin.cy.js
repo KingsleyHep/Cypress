@@ -8,7 +8,6 @@ beforeEach(() => {
   cy.navigateToAdminOptions();
 });
 
-//! unitas_background is the class of the body element inside the iFrame pageContent
 //Page is rendered with pageContainer first, then iFrame of pageContent, then and iFrame of content
 describe("visual regression tests admin pages - certificates and contracts", () => {
   //todo: certificates and contracts
@@ -17,7 +16,6 @@ describe("visual regression tests admin pages - certificates and contracts", () 
     cy.get("#pageContent")
       .its("0.contentDocument")
       .its("body")
-      //located by id on main sys admin page
       .find("#AdminOpts")
       .then((body) => {
         cy.wrap(body)
@@ -38,7 +36,50 @@ describe("visual regression tests admin pages - certificates and contracts", () 
       });
     //!begin here
     //farm certificates
-    //contract types
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find("#AdminOpts")
+      .then((body) => {
+        cy.wrap(body)
+          .find("td")
+          .find(
+            'a[href="../shared/call_dot_net_page.asp?page=../farms/CertificateDetails.aspx?"]'
+          )
+          .click();
+      });
+    cy.wait(750);
+    cy.compareSnapshot("farm certificates on load", 0.3);
+    //todo: complete navigation
+    //select farm
+
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find("#FarmerDisplay")
+      .then((body) => {
+        cy.wrap(body).find("#FarmersList").click();
+      });
+
+    //refresh
+    cy.get("#pageContent")
+      .its("0.contentDocument")
+      .its("body")
+      .find('[name="form1"]')
+      .then((body) => {
+        cy.wrap(body).find("#Run").click();
+      });
+    //! start here
+    //snapshot
+
+    //add row
+
+    //snapshot
+
+    //navigate back
+
+    cy.pause();
+    //todo: contract types
   });
 
   //end of describe scope

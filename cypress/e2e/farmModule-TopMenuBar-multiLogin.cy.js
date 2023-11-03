@@ -11,7 +11,7 @@ beforeEach(() => {
 describe("visual regression tests for farm navigation bar options", () => {
   it("takes a picture of the dashboard page", () => {
     cy.frameLoaded("iframe#pageContent");
-    cy.wait(300);
+    cy.wait(750);
     cy.compareSnapshot("dashboard", 0.3);
   });
 
@@ -22,7 +22,7 @@ describe("visual regression tests for farm navigation bar options", () => {
         cy.get("#TopBox").should("be.visible");
       });
     });
-    cy.wait(300);
+    cy.wait(750);
     cy.compareSnapshot("group", 0.3);
   });
 
@@ -33,7 +33,7 @@ describe("visual regression tests for farm navigation bar options", () => {
         cy.get("#TopBox").should("be.visible");
       });
     });
-    cy.wait(300);
+    cy.wait(750);
     cy.compareSnapshot("production", 0.3);
   });
 
@@ -44,7 +44,7 @@ describe("visual regression tests for farm navigation bar options", () => {
         cy.get("#TopBox").should("be.visible");
       });
     });
-    cy.wait(300);
+    cy.wait(750);
     cy.compareSnapshot("placement", 0.3);
   });
 
@@ -55,7 +55,7 @@ describe("visual regression tests for farm navigation bar options", () => {
         cy.get("#TopBox").should("be.visible");
       });
     });
-    cy.wait(300);
+    cy.wait(750);
     cy.compareSnapshot("schedule", 0.3);
   });
 
@@ -66,7 +66,7 @@ describe("visual regression tests for farm navigation bar options", () => {
         cy.get("#TopBox").should("be.visible");
       });
     });
-    cy.wait(300);
+    cy.wait(750);
     cy.compareSnapshot("documents", 0.3);
   });
 
@@ -80,7 +80,7 @@ describe("visual regression tests for farm navigation bar options", () => {
         //cy.get("TopBox").should("contain", "#options");
       });
     });
-    cy.wait(300);
+    cy.wait(750);
     cy.compareSnapshot("farmReports", 0.3);
   });
   //end of describe scope

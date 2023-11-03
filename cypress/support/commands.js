@@ -23,6 +23,7 @@ Cypress.Commands.add("selectAnyFarm", () => {
   });
 });
 
+//! fix/replace with workaround or as selectAnyFarm
 Cypress.Commands.add("navigateToFarmReports", () => {
   cy.iframe("#pageContent").within(() => {
     cy.frameLoaded("iframe#content");
