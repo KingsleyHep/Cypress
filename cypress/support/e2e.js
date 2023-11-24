@@ -14,12 +14,12 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
 // See: https://cypress.visual-image-diff.dev/getting-started/cypress-integration/javascript
 // cypress/support/{scheme}.js, where {scheme} defaults to e2e
-const compareSnapshotCommand = require('cypress-image-diff-js/dist/command');
+const compareSnapshotCommand = require("cypress-image-diff-js/dist/command");
 compareSnapshotCommand();

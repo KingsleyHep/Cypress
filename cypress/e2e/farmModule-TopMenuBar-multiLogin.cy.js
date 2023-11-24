@@ -33,7 +33,7 @@ describe("visual regression tests for farm navigation bar options", () => {
         cy.get("#TopBox").should("be.visible");
       });
     });
-    cy.wait(750);
+    cy.wait(2500);
     cy.compareSnapshot("production", 0.3);
   });
 
